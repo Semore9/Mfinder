@@ -1,0 +1,31 @@
+id: SVN-login
+info:
+  name: SVN-default-login
+  severity: high
+  tags: svn
+  zombie: svn
+http:
+  - raw:
+      - |
+        GET /svn/ HTTP/1.1
+        Host: {{Host}}
+        Authorization: Basic {{base64(username + ':' + password)}}
+
+    attack: pitchfork
+    matchers:
+      - status:
+          - 200
+          - 301
+        type: status
+      - type: word
+        words:
+          - svn
+          - Subversion
+    matchers-condition: and
+    payloads:
+      username:
+        - admin
+        - svn
+      password:
+        - admin
+        - svn

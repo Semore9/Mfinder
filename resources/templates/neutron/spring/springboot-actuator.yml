@@ -1,0 +1,30 @@
+id: springboot-actuator
+info:
+  name: Detect Springboot Actuator
+  author: pussycat0x
+  severity: info
+  description: Additional routes may be displayed
+  tags: springboot
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/{{path}}"
+      - "{{BaseURL}}/actuator/{{path}}"
+    matchers-condition: and
+    stop-at-first-match: true
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        part: body
+        words:
+          - '"_links":'
+          - '"self":'
+          - '"health"'
+        condition: and
+    payloads:
+      path:
+        - info
+        - env

@@ -1,0 +1,27 @@
+id: bdcom-sw-login
+info:
+  author: sakurashiro
+  name: bdcom-sw-default-password
+  severity: high
+  tags: 博达交换机
+  zombie: boda
+http:
+  - raw:
+      - |
+        GET / HTTP/1.1
+        Host: {{Host}}
+        Authorization: Basic {{base64(username + ':' + password)}}
+    attack: pitchfork
+    matchers:
+      - status:
+          - 302
+        type: status
+      - type: word
+        words:
+          - location
+    matchers-condition: and
+    payloads:
+      username:
+        - admin
+      password:
+        - admin

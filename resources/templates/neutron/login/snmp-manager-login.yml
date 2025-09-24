@@ -1,0 +1,27 @@
+id: SNMP-Manage-login
+info:
+  author: sakurashiro
+  name: SNMP-Manage-default-password
+  severity: high
+  tags: snmp
+  zombie: snmp_manage
+http:
+  - raw:
+      - |
+        GET / HTTP/1.1
+        Host: {{Host}}
+        Authorization: Basic {{base64(username + ':' + password)}}
+    attack: pitchfork
+    matchers:
+      - status:
+          - 200
+        type: status
+      - type: word
+        words:
+          - SNMP
+    matchers-condition: and
+    payloads:
+      username:
+        - admin
+      password:
+        - admin

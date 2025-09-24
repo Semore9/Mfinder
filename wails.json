@@ -1,0 +1,17 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "MFinder",
+  "outputfilename": "MFinder",
+  "frontend:install": "powershell -Command \"Set-Location frontend; npm install --legacy-peer-deps\"",
+  "frontend:build": "powershell -Command \"Set-Location frontend; npm run build\"",
+  "frontend:dev:watcher": "powershell -Command \"Set-Location frontend; npm run dev -- --host 127.0.0.1 --port 5173\"",
+  "frontend:dev:serverUrl": "http://127.0.0.1:5173",
+  "author": {
+    "name": "fasnow",
+    "email": ""
+  },
+  "info": {
+    "productVersion": "1.0.0",
+    "copyright": "@fasnow"
+  }
+}

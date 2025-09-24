@@ -1,0 +1,10 @@
+{
+  "mchid": "1900000109",
+  "api_v3_key": "sk_test_WECHATPAYKEY1234567890ABC",
+  "session_key": "J8F7vZC5r7lvh2MlP1sYRA==",
+  "cloud_env": "cloud://demo-env-1234.cloudbase.net/assets/config.json",
+  "component_appid": "wx1234567890abcdef",
+  "component_secret": "ABCDEF1234567890ABCDEF1234567890",
+  "apiclient_cert": "C:/certs/wepay/apiclient_cert.pem",
+  "apiclient_key": "C:/certs/wepay/apiclient_key.pem"
+}

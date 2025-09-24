@@ -1,0 +1,221 @@
+.gogo-page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.gogo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+}
+
+.gogo-right-column {
+  min-height: 0;
+}
+
+.gogo-card {
+  border-radius: 12px;
+}
+
+.gogo-card .ant-card-head {
+  border-bottom: none;
+  padding: 0 16px;
+}
+
+.gogo-card .ant-card-head-title {
+  font-weight: 600;
+}
+
+.gogo-card .ant-card-body {
+  padding: 16px;
+}
+
+.gogo-form .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.gogo-divider {
+  margin: 8px 0;
+}
+
+.gogo-action-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.gogo-action-group .ant-space {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gogo-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.gogo-tab-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gogo-tabs .ant-tabs-nav {
+  margin-bottom: 16px;
+}
+
+.gogo-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gogo-summary-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.gogo-summary-header .ant-typography:last-child {
+  margin-left: auto;
+}
+
+.gogo-summary-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.gogo-summary-metric {
+  background: rgba(64, 150, 255, 0.08);
+  border: 1px solid rgba(64, 150, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px 16px;
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gogo-summary-value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.gogo-summary-label {
+  font-size: 12px;
+  color: var(--ant-color-text-tertiary, #8c8c8c);
+}
+
+.gogo-summary-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gogo-table {
+  width: 100%;
+}
+
+.gogo-table-compact .ant-table-thead > tr > th,
+.gogo-table-compact .ant-table-tbody > tr > td {
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.gogo-table-compact .ant-table-tbody > tr > td {
+  line-height: 20px;
+}
+
+.gogo-table-compact .ant-tag {
+  padding-inline: 6px;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.gogo-compact-toggle .ant-typography {
+  margin: 0;
+  font-size: 12px;
+}
+
+.gogo-toolbar-count {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.gogo-form textarea {
+  resize: vertical;
+}
+
+.gogo-advanced {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gogo-advanced .ant-form-item {
+  margin-bottom: 12px;
+}
+
+.gogo-advanced-collapse .ant-collapse-item {
+  border: 0;
+}
+
+.gogo-advanced-collapse .ant-collapse-header {
+  padding: 8px 0;
+  font-weight: 500;
+}
+
+.gogo-log {
+  max-height: 280px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gogo-log-entry {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gogo-log-message {
+  flex: 1;
+}
+
+.gogo-active-row {
+  background-color: rgba(64, 150, 255, 0.12) !important;
+}
+
+.gogo-extracts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gogo-extracts-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (max-width: 1200px) {
+  .gogo-page {
+    padding: 16px;
+  }
+
+  .gogo-summary-metric {
+    min-width: 90px;
+  }
+}

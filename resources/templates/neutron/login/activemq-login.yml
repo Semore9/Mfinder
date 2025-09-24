@@ -1,0 +1,27 @@
+id: activemq-login
+info:
+  author: pdteam
+  name: activemq-default-password
+  severity: high
+  tags: activemq-manager
+  zombie: activemq
+http:
+  - raw:
+      - |
+        GET /admin/ HTTP/1.1
+        Host: {{Host}}
+        Authorization: Basic {{base64(username + ':' + password)}}
+    attack: pitchfork
+    matchers:
+      - status:
+          - 200
+        type: status
+      - type: word
+        words:
+          - ActiveMQ Console
+    matchers-condition: and
+    payloads:
+      username:
+        - admin
+      password:
+        - admin
