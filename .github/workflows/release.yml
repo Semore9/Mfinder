@@ -12,6 +12,10 @@ env:
   node-version: '18'
   wails-version: 'latest'
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     strategy:
