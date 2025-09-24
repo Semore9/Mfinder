@@ -73,10 +73,12 @@ jobs:
         run: wails generate module
 
       - name: Install frontend dependencies
-        run: npm --prefix frontend install --legacy-peer-deps
+        working-directory: frontend
+        run: npm install --legacy-peer-deps
 
       - name: Build frontend assets
-        run: npm --prefix frontend run build
+        working-directory: frontend
+        run: npm run build
 
       - name: Install UPX
         if: matrix.build.os == 'windows'
