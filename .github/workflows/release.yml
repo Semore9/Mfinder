@@ -64,6 +64,11 @@ jobs:
         with:
           node-version: ${{ env.node-version }}
 
+      - name: Prepare frontend dist directory
+        run: |
+          mkdir -p frontend/dist
+          touch frontend/dist/.placeholder
+
       - name: Generate Wails bindings
         run: wails generate module
 
