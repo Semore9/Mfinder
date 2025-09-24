@@ -51,17 +51,6 @@ jobs:
           artifact_name="${{ format('MFinder_{0}_{1}{2}', matrix.build.os, matrix.build.arch, matrix.build.os == 'windows' && '.exe' || '.app') }}"
           echo "artifact_name=$artifact_name" >> $GITHUB_OUTPUT
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.node-version }}
-
-      - name: Install frontend dependencies
-        run: npm --prefix frontend install --legacy-peer-deps
-
-      - name: Build frontend assets
-        run: npm --prefix frontend run build
-
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
@@ -69,6 +58,20 @@ jobs:
 
       - name: Install Wails
         run: go install github.com/wailsapp/wails/v2/cmd/wails@${{ env.wails-version }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.node-version }}
+
+      - name: Generate Wails bindings
+        run: wails generate module
+
+      - name: Install frontend dependencies
+        run: npm --prefix frontend install --legacy-peer-deps
+
+      - name: Build frontend assets
+        run: npm --prefix frontend run build
 
       - name: Install UPX
         if: matrix.build.os == 'windows'
