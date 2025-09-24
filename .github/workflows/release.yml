@@ -136,13 +136,9 @@ jobs:
             artifacts/**
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
-            feat: 内置httpx;
-            feat: 新增端口扫描和指纹识别;
-            update: #87 @Lyf888lyf 表格tooltip延迟2s;
-            fix: #67 @addbba-cmy icp批量查询输入过多导致的异常;
-            fix: #72 @comxza 小程序html文件格式异常;
-            fix: #79 @chenroot1 程序panic导致的异常退出;
-            fix: #101 @Aries014 备案信息结果重复;
-            fix: #103 @VSolitus 无法正常启动;
-            fix: #105 @nhqqxs 无法获取非网站备案详细信息;
-            fix: #106 @Joker123op 无法获取非网站备案详细信息。
+            ## MFinder
+
+            MFinder 是一款跨平台的信息收集与指纹识别工具，整合了 FOFA、Hunter、Quake、Shodan 等平台的数据。
+            支持备案查询、端口探测、资产分类、微信小程序解包等功能，提供统一的任务编排与批量导出能力。
+
+            本版本发布自动构建的 Windows 与 macOS 安装包，建议阅读仓库 README 了解使用方式与注意事项。
