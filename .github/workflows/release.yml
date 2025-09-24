@@ -8,7 +8,7 @@ on:
 env:
   # Necessary for most environments as build failure can occur due to OOM issues
 #  NODE_OPTIONS: "--max-old-space-size=4096"
-  go-version: '1.24.0'
+  go-version: '1.22.5'
   node-version: '18'
   wails-version: 'latest'
 

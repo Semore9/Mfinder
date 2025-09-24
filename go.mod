@@ -1,6 +1,6 @@
 module mfinder
 
-go 1.24.1
+go 1.22.5
 
 require (
 	github.com/buger/jsonparser v1.1.1
