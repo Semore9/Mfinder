@@ -42,6 +42,7 @@ jobs:
 
       - name: Set artifact name
         id: set_artifact_name
+        shell: bash
         run: |
           artifact_name="${{ format('MFinder_{0}_{1}{2}', matrix.build.os, matrix.build.arch, matrix.build.os == 'windows' && '.exe' || '.app') }}"
           echo "artifact_name=$artifact_name" >> $GITHUB_OUTPUT
