@@ -43,8 +43,8 @@ jobs:
       - name: Set artifact name
         id: set_artifact_name
         run: |
-          echo "artifact_name=${{ format('MFinder_{0}_{1}{2}', matrix.build.os, matrix.build.arch, matrix.build.os == 'windows' && '.exe' || '.app') }}"
-          echo "::set-output name=artifact_name::${{ format('MFinder_{0}_{1}{2}', matrix.build.os, matrix.build.arch, matrix.build.os == 'windows' && '.exe' || '.app') }}"
+          artifact_name="${{ format('MFinder_{0}_{1}{2}', matrix.build.os, matrix.build.arch, matrix.build.os == 'windows' && '.exe' || '.app') }}"
+          echo "artifact_name=$artifact_name" >> $GITHUB_OUTPUT
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -107,7 +107,7 @@ jobs:
         with:
           files: |
             artifacts/**
-          token: ${{ secrets.FINE }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             feat: 内置httpx;
             feat: 新增端口扫描和指纹识别;
